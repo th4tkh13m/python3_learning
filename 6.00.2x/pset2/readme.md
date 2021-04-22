@@ -21,5 +21,5 @@ and uncomment it (remove the hash #)
 3) Make sure all the versions except the one relating to your python version are commented out with a #
 
 then the test and plot functionality should be restored.
-The following link is a link for downloading the needed file for different python version:
+The following link is a link for downloading the needed files for different python versions:
 https://github.com/Richard-B-UK/MITx-6.00.2x-version-files-for-Python-3.5---3.9
