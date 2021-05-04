@@ -10,3 +10,9 @@ My Python 3 learning progress
 3. 6.000.1x
 
 4. 6.000.2x
+
+Inside:
+
+  -ps1: A cow choosing problem which is similar to the knapsack problem
+  
+  -ps2: A cleaning robot that can move around the room.
