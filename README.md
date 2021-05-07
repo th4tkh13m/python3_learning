@@ -16,3 +16,5 @@ Inside:
   -ps1: A cow choosing problem which is similar to the knapsack problem
   
   -ps2: A cleaning robot that can move around the room.
+  
+  -ps3: Simulate a Virus development inside a Patient
