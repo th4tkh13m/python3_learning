@@ -72,6 +72,7 @@ numSamples = 1000
 maxMeanDiff = 0
 maxSDDiff = 0
 sampleMeans = []
+print
 for i in range(numSamples):
     sample = random.sample(population, sampleSize)
     popMean, sampleMean, popSD, sampleSD =\

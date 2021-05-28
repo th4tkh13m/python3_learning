@@ -48,11 +48,12 @@ def getMeansAndSDs(population, sample, verbose = True):
     popMean = sum(population)/len(population)
     sampleMean = sum(sample)/len(sample)
     if verbose:
+        pylab.figure('Population')
         makeHist(population,
                  'Daily High 1961-2015, Population\n' +\
                  '(mean = '  + str(round(popMean, 2)) + ')',
                  'Degrees C', 'Number Days')
-        pylab.figure()
+        pylab.figure('Sample')
         makeHist(sample, 'Daily High 1961-2015, Sample\n' +\
                  '(mean = ' + str(round(sampleMean, 2)) + ')',
                  'Degrees C', 'Number Days')   
@@ -66,8 +67,19 @@ def getMeansAndSDs(population, sample, verbose = True):
            numpy.std(population), numpy.std(sample)
 
 random.seed(0)         
+sampleSize = 100
+numSample = 1000
 population = getHighs()
-sample = random.sample(population, 100)
+sample = random.sample(population, sampleSize)
 getMeansAndSDs(population, sample, True)
+sampleMeans = []
+for num in range(numSample):
+    sample = random.sample(population, sampleSize)
+    popMean, sampleMean, SDPop,\
+        SPSample = getMeansAndSDs(population, sample, False)
+    sampleMeans.append(sampleMean)
+pylab.figure('Sample Mean')
+makeHist(sampleMeans, 'Sample Mean',  'Degree C', 'Day')
+
 pylab.show()
 
